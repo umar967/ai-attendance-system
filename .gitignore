@@ -1,0 +1,25 @@
+# Python cache / virtual env
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Project runtime data
+Code/dataset/
+Code/attendance_excel/
+Code/encodings.pickle
+Code/results/
+Code/runs/
+Code/screenshot_*.jpg
+
+# Local OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large downloaded model files
+Code/yolov8n.pt
+Code/yolov8n-face.pt
