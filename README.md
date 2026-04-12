@@ -151,6 +151,6 @@ Recommended exclusions:
 
 ## Author
 
-- Name: Your Name
-- LinkedIn: Add your LinkedIn profile link
-- GitHub: Add your GitHub profile link
+- Name: Umar Awais Tayyab
+- LinkedIn: https://www.linkedin.com/in/umar-awais-ab3837318/
+- GitHub: https://github.com/umar967
