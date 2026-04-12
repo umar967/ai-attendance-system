@@ -1,6 +1,8 @@
 # AI Attendance System
 
-An AI-powered desktop attendance system that uses face detection and face recognition to automate student attendance.
+An AI-powered desktop attendance system that automates student enrollment, face detection, face recognition, and attendance marking through a simple Python application.
+
+This project combines computer vision and machine learning to reduce manual attendance work and generate structured attendance records for different subjects.
 
 ## Features
 
@@ -11,6 +13,15 @@ An AI-powered desktop attendance system that uses face detection and face recogn
 - Excel export for attendance records
 - Simple desktop interface built with Tkinter
 - Basic evaluation script for recognition performance
+
+## Workflow
+
+1. Enroll a student and capture face images from webcam.
+2. Store the student's SAP ID and dataset images.
+3. Generate face encodings from the enrolled dataset.
+4. Start attendance for a selected subject.
+5. Detect and recognize faces in real time.
+6. Mark recognized students present and export attendance to Excel.
 
 ## Tech Stack
 
@@ -31,19 +42,19 @@ An AI-powered desktop attendance system that uses face detection and face recogn
 
 ```text
 Attendance System/
-├── Code/
-│   ├── UI.py
-│   ├── index.py
-│   ├── enroll.py
-│   ├── recognize.py
-│   ├── encode_faces.py
-│   ├── attendance.py
-│   ├── evaluation.py
-│   ├── config.py
-│   └── requirements.txt
-└── Project_SS/
-    ├── Attendance/
-    └── Enrollment/
+|-- Code/
+|   |-- UI.py
+|   |-- index.py
+|   |-- enroll.py
+|   |-- recognize.py
+|   |-- encode_faces.py
+|   |-- attendance.py
+|   |-- evaluation.py
+|   |-- config.py
+|   `-- requirements.txt
+`-- Project_SS/
+    |-- Attendance/
+    `-- Enrollment/
 ```
 
 ## Setup
@@ -82,6 +93,16 @@ python Code/UI.py
 - Mark students present once per session
 - Export attendance to Excel by subject
 
+## Core Modules
+
+- `UI.py`: Tkinter-based desktop interface
+- `enroll.py`: student enrollment and dataset collection
+- `encode_faces.py`: face encoding generation from dataset images
+- `recognize.py`: face recognition logic with configurable match tolerance
+- `index.py`: real-time attendance flow using webcam input
+- `attendance.py`: attendance export and subject-wise record management
+- `evaluation.py`: recognition performance analysis
+
 ## Important Privacy Note
 
 This project uses face images and derived face encodings. Do not upload private student datasets or generated biometric encodings to a public repository.
@@ -104,8 +125,32 @@ Recommended exclusions:
 
 ## Screenshots
 
-You can add screenshots from the `Project_SS/` folder here after publishing the repository.
+### Enrollment UI
+
+![Enrollment UI](Project_SS/Enrollment/UI.png)
+
+### Enrollment Information
+
+![Enrollment Info](Project_SS/Enrollment/Enrollment_Info.png)
+
+### Attendance UI
+
+![Attendance UI](Project_SS/Attendance/UI.png)
+
+### Attendance Process
+
+![Attendance Process](Project_SS/Attendance/Process_Info.png)
+
+### Attendance Screenshot
+
+![Attendance Screenshot](Project_SS/Attendance/screenshot_AI.jpg)
+
+### Excel Output
+
+![Excel Output](Project_SS/Attendance/Excel_Sheet.png)
 
 ## Author
 
-Add your name, LinkedIn, and GitHub profile here.
+- Name: Your Name
+- LinkedIn: Add your LinkedIn profile link
+- GitHub: Add your GitHub profile link
