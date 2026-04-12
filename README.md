@@ -151,6 +151,6 @@ Recommended exclusions:
 
 ## Author
 
-Name: Umar Awais Tayyab
-LinkedIn: https://www.linkedin.com/in/umar-awais-ab3837318/
-GitHub: https://github.com/umar967
+- Name: Umar Awais Tayyab
+- LinkedIn: https://www.linkedin.com/in/umar-awais-ab3837318/
+- GitHub: https://github.com/umar967
