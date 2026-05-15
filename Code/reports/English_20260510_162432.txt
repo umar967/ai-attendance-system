@@ -1,0 +1,69 @@
+AttendAI Session Report
+Subject: English
+Teacher: Muhammad Awais
+Date: 2026-05-10
+
+Session Summary:
+Class Monitor Only
+
+AI Model Summary:
+No AI Model Summary
+
+At-Risk Students:
+54633, 57103, 56226, 65261, 64710, 64832
+
+Behavioral Flags:
+phone, inattention, aggressive movement
+
+Recommendation:
+Students with phone detection and inattention/inactive behavior are at risk. Recommend taking extra steps to engage them.
+
+Source Metrics:
+{
+  "teacher_name": "Muhammad Awais",
+  "subject": "English",
+  "date": "2026-05-10",
+  "session_started": "2026-05-10 16:17:19",
+  "session_ended": "2026-05-10 16:23:54",
+  "total_students_enrolled": 6,
+  "present_count": 0,
+  "absent_count": 0,
+  "absent_students": [],
+  "students_below_75_percent": [
+    {
+      "sap_id": "54633",
+      "name": "Abdul Rahman",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "57103",
+      "name": "Abdullah",
+      "percentage": 10.0
+    },
+    {
+      "sap_id": "56226",
+      "name": "Ahsan Ali",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "65261",
+      "name": "Khizer",
+      "percentage": 30.0
+    },
+    {
+      "sap_id": "64710",
+      "name": "Tayyab",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "64832",
+      "name": "Umar",
+      "percentage": 60.0
+    }
+  ],
+  "phone_detection_count": 2,
+  "average_drowsiness_count": 7.0,
+  "average_inattention_count": 29.0,
+  "average_aggressive_count": 0.0,
+  "session_mode": "class monitor only"
+}

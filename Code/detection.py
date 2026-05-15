@@ -1,13 +1,14 @@
 from ultralytics import YOLO
-import cv2
+
+from config import YOLO_MODEL_PATH
+
 
 class FaceDetector:
-    def __init__(self, model_path):
-        self.model = YOLO("yolov8n.pt")
-
+    def __init__(self, model_path=YOLO_MODEL_PATH):
+        self.model = YOLO(model_path)
 
     def detect_faces(self, frame):
-        results = self.model(frame)
+        results = self.model(frame, conf=0.5, verbose=False)
         boxes = []
 
         for r in results:

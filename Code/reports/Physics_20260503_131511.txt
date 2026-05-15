@@ -1,0 +1,64 @@
+AttendAI Session Report
+Subject: Physics
+Teacher: Yasir
+Date: 2026-05-03
+
+Session Summary:
+Physics session completed with 2 present and 4 absent students. AI generation fallback was used: Extra data: line 9 column 1 (char 195)
+
+AI Model Summary:
+The class report was generated from attendance, phone, drowsiness, and attention data. The summary is written in easy English.
+
+At-Risk Students:
+54633, 57103, 56226, 64710
+
+Behavioral Flags:
+Phone detections: 0. Average drowsiness count: 0.0. Average inattention count: 0.0. Average aggressive movement count: 0.0.
+
+Recommendation:
+Review absent and at-risk students, reinforce device policy, and follow up with students showing repeated attention concerns.
+
+Source Metrics:
+{
+  "teacher_name": "Yasir",
+  "subject": "Physics",
+  "date": "2026-05-03",
+  "session_started": "2026-05-03 13:11:07",
+  "session_ended": "2026-05-03 13:14:35",
+  "total_students_enrolled": 6,
+  "present_count": 2,
+  "absent_count": 4,
+  "absent_students": [
+    "Abdul Rahman",
+    "Abdullah",
+    "Ahsan Ali",
+    "Tayyab"
+  ],
+  "students_below_75_percent": [
+    {
+      "sap_id": "54633",
+      "name": "Abdul Rahman",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "57103",
+      "name": "Abdullah",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "56226",
+      "name": "Ahsan Ali",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "64710",
+      "name": "Tayyab",
+      "percentage": 0.0
+    }
+  ],
+  "phone_detection_count": 0,
+  "average_drowsiness_count": 0.0,
+  "average_inattention_count": 0.0,
+  "average_aggressive_count": 0.0,
+  "session_mode": "attendance"
+}

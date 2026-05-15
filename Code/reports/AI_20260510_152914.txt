@@ -1,0 +1,75 @@
+AttendAI Session Report
+Subject: AI
+Teacher: Awais
+Date: 2026-05-10
+
+Session Summary:
+Session summary for AI class
+
+AI Model Summary:
+
+
+At-Risk Students:
+54633, 57103
+
+Behavioral Flags:
+phone detection, drowsiness, inattention, aggressive movement
+
+Recommendation:
+
+
+Source Metrics:
+{
+  "teacher_name": "Awais",
+  "subject": "AI",
+  "date": "2026-05-10",
+  "session_started": "2026-05-10 15:24:26",
+  "session_ended": "2026-05-10 15:28:29",
+  "total_students_enrolled": 6,
+  "present_count": 1,
+  "absent_count": 5,
+  "absent_students": [
+    "Abdul Rahman",
+    "Abdullah",
+    "Ahsan Ali",
+    "Khizer",
+    "Tayyab"
+  ],
+  "students_below_75_percent": [
+    {
+      "sap_id": "54633",
+      "name": "Abdul Rahman",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "57103",
+      "name": "Abdullah",
+      "percentage": 11.11
+    },
+    {
+      "sap_id": "56226",
+      "name": "Ahsan Ali",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "65261",
+      "name": "Khizer",
+      "percentage": 22.22
+    },
+    {
+      "sap_id": "64710",
+      "name": "Tayyab",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "64832",
+      "name": "Umar",
+      "percentage": 55.56
+    }
+  ],
+  "phone_detection_count": 0,
+  "average_drowsiness_count": 0.0,
+  "average_inattention_count": 0.0,
+  "average_aggressive_count": 0.0,
+  "session_mode": "attendance"
+}

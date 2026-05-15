@@ -1,0 +1,59 @@
+AttendAI Session Report
+Subject: Computer
+Teacher: Zahid
+Date: 2026-05-03
+
+Session Summary:
+Student attendance report
+
+At-Risk Students:
+54633, 57103, 56226, 64710
+
+Behavioral Flags:
+Present, Absent, Drowsiness, Inattention
+
+Recommendation:
+Students below 75% should be monitored further.
+
+Source Metrics:
+{
+  "teacher_name": "Zahid",
+  "subject": "Computer",
+  "date": "2026-05-03",
+  "session_started": "2026-05-03 12:12:13",
+  "session_ended": "2026-05-03 12:17:22",
+  "total_students_enrolled": 6,
+  "present_count": 2,
+  "absent_count": 4,
+  "absent_students": [
+    "Abdul Rahman",
+    "Abdullah",
+    "Ahsan Ali",
+    "Tayyab"
+  ],
+  "students_below_75_percent": [
+    {
+      "sap_id": "54633",
+      "name": "Abdul Rahman",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "57103",
+      "name": "Abdullah",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "56226",
+      "name": "Ahsan Ali",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "64710",
+      "name": "Tayyab",
+      "percentage": 0.0
+    }
+  ],
+  "phone_detection_count": 23,
+  "average_drowsiness_count": 10.5,
+  "average_inattention_count": 165.5
+}

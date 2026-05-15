@@ -1,0 +1,59 @@
+AttendAI Session Report
+Subject: Physics
+Teacher: Yasir
+Date: 2026-05-03
+
+Session Summary:
+No action required
+
+AI Model Summary:
+
+
+At-Risk Students:
+54633, 57103, 56226, 64710
+
+Behavioral Flags:
+None
+
+Recommendation:
+
+
+Source Metrics:
+{
+  "teacher_name": "Yasir",
+  "subject": "Physics",
+  "date": "2026-05-03",
+  "session_started": "2026-05-03 13:14:51",
+  "session_ended": "2026-05-03 13:18:26",
+  "total_students_enrolled": 6,
+  "present_count": 0,
+  "absent_count": 0,
+  "absent_students": [],
+  "students_below_75_percent": [
+    {
+      "sap_id": "54633",
+      "name": "Abdul Rahman",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "57103",
+      "name": "Abdullah",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "56226",
+      "name": "Ahsan Ali",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "64710",
+      "name": "Tayyab",
+      "percentage": 0.0
+    }
+  ],
+  "phone_detection_count": 1,
+  "average_drowsiness_count": 2.0,
+  "average_inattention_count": 32.17,
+  "average_aggressive_count": 13.5,
+  "session_mode": "class monitor only"
+}

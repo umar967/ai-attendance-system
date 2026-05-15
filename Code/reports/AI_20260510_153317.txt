@@ -1,0 +1,69 @@
+AttendAI Session Report
+Subject: AI
+Teacher: Awais
+Date: 2026-05-10
+
+Session Summary:
+Class Monitor Session
+
+AI Model Summary:
+No recommendation needed
+
+At-Risk Students:
+54633, 57103, 56226, 65261, 64710, 64832
+
+Behavioral Flags:
+drowsiness, inattention, aggressive movement
+
+Recommendation:
+
+
+Source Metrics:
+{
+  "teacher_name": "Awais",
+  "subject": "AI",
+  "date": "2026-05-10",
+  "session_started": "2026-05-10 15:28:34",
+  "session_ended": "2026-05-10 15:32:52",
+  "total_students_enrolled": 6,
+  "present_count": 0,
+  "absent_count": 0,
+  "absent_students": [],
+  "students_below_75_percent": [
+    {
+      "sap_id": "54633",
+      "name": "Abdul Rahman",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "57103",
+      "name": "Abdullah",
+      "percentage": 11.11
+    },
+    {
+      "sap_id": "56226",
+      "name": "Ahsan Ali",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "65261",
+      "name": "Khizer",
+      "percentage": 22.22
+    },
+    {
+      "sap_id": "64710",
+      "name": "Tayyab",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "64832",
+      "name": "Umar",
+      "percentage": 55.56
+    }
+  ],
+  "phone_detection_count": 2,
+  "average_drowsiness_count": 2.5,
+  "average_inattention_count": 55.0,
+  "average_aggressive_count": 12.5,
+  "session_mode": "class monitor only"
+}

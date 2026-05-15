@@ -1,0 +1,76 @@
+AttendAI Session Report
+Subject: Video Graphics
+Teacher: Dr. Faizan
+Date: 2026-05-05
+
+Session Summary:
+Session Summary
+
+AI Model Summary:
+AI Model Summary
+
+At-Risk Students:
+54633, 57103, 56226, 65261, 64710, 64832
+
+Behavioral Flags:
+phone_detection_count, average_drowsiness_count, average_inattention_count, average_aggressive_count
+
+Recommendation:
+Recommendation: Please improve student engagement and focus during the sessions.
+
+Source Metrics:
+{
+  "teacher_name": "Dr. Faizan",
+  "subject": "Video Graphics",
+  "date": "2026-05-05",
+  "session_started": "2026-05-05 10:19:50",
+  "session_ended": "2026-05-05 10:22:39",
+  "total_students_enrolled": 6,
+  "present_count": 0,
+  "absent_count": 6,
+  "absent_students": [
+    "Abdul Rahman",
+    "Abdullah",
+    "Ahsan Ali",
+    "Khizer",
+    "Tayyab",
+    "Umar"
+  ],
+  "students_below_75_percent": [
+    {
+      "sap_id": "54633",
+      "name": "Abdul Rahman",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "57103",
+      "name": "Abdullah",
+      "percentage": 20.0
+    },
+    {
+      "sap_id": "56226",
+      "name": "Ahsan Ali",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "65261",
+      "name": "Khizer",
+      "percentage": 40.0
+    },
+    {
+      "sap_id": "64710",
+      "name": "Tayyab",
+      "percentage": 0.0
+    },
+    {
+      "sap_id": "64832",
+      "name": "Umar",
+      "percentage": 60.0
+    }
+  ],
+  "phone_detection_count": 0,
+  "average_drowsiness_count": 0.0,
+  "average_inattention_count": 0.0,
+  "average_aggressive_count": 0.0,
+  "session_mode": "attendance"
+}

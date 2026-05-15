@@ -1,22 +1,27 @@
-import pickle
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, confusion_matrix
-from sklearn.metrics import precision_score, recall_score, f1_score
-from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.metrics import precision_score, recall_score, f1_score
+from sklearn.model_selection import train_test_split
 
-ENCODINGS_FILE = "encodings.pickle"
+from database import load_face_encodings
+
+
 RANDOM_STATE = 333
 TEST_SIZE = 0.2
 
-# Load encodings and names
-with open(ENCODINGS_FILE, "rb") as f:
-    data = pickle.load(f)
 
-X = np.array(data["encodings"])
-y = np.array(data["names"])
+def load_evaluation_data():
+    """Load face encodings and labels from MySQL for model evaluation."""
+    known_encodings, known_names, _ = load_face_encodings()
+    if not known_encodings:
+        raise RuntimeError("No MySQL face encodings found for evaluation.")
+    return np.array(known_encodings), np.array(known_names)
+
+
+X, y = load_evaluation_data()
 
 # Test-train splitting
 X_train, X_test, y_train, y_test = train_test_split(
@@ -48,11 +53,11 @@ print("EVALUATION METRICS")
 accuracy = accuracy_score(y_test, y_pred)
 print(f"\nAccuracy : {accuracy:.4f} ({accuracy*100:.2f}%)")
 
-# Precision, Recall, F1-Score 
+# Precision, Recall, F1-Score
 precision = precision_score(y_test, y_pred, average='weighted')
 recall = recall_score(y_test, y_pred, average='weighted')
 f1 = f1_score(y_test, y_pred, average='weighted')
-#scores
+# scores
 print(f"Precision: {precision:.4f} ({precision*100:.2f}%)")
 print(f"Recall   : {recall:.4f} ({recall*100:.2f}%)")
 print(f"F1-Score : {f1:.4f} ({f1*100:.2f}%)")
@@ -75,4 +80,3 @@ plt.ylabel("Actual", fontsize=12)
 plt.title("Confusion Matrix - Face Recognition Model", fontsize=14)
 plt.tight_layout()
 plt.show()
-
