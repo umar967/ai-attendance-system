@@ -43,3 +43,24 @@ REPORTS_DIR = "reports"
 
 EMAIL_SENDER = "uawais967@gmail.com"
 EMAIL_PASSWORD = "kduf psuc wicz mbbk"
+
+# Theme persistence configuration
+import json, os
+THEME_CONFIG_PATH = os.path.join(os.path.dirname(__file__), "theme_config.json")
+
+def load_theme():
+    """Load saved theme name from config file. Returns 'light' if not set or error."""
+    try:
+        with open(THEME_CONFIG_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            return data.get("theme", "light")
+    except Exception:
+        return "light"
+
+def save_theme(theme_name: str):
+    """Save the given theme name to config file."""
+    try:
+        with open(THEME_CONFIG_PATH, "w", encoding="utf-8") as f:
+            json.dump({"theme": theme_name}, f)
+    except Exception as e:
+        print(f"[WARNING] Could not save theme config: {e}")

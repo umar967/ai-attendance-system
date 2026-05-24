@@ -23,3 +23,6 @@ Thumbs.db
 # Large downloaded model files
 Code/yolov8n.pt
 Code/yolov8n-face.pt
+
+# Local JSON config/prompts
+*.json

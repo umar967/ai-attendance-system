@@ -42,7 +42,8 @@ def get_all_students_from_database():
 # Enroll Student
 def enroll_student(student_name, images_count=10):
     model = get_face_yolo()
-    cap = cv2.VideoCapture(0)
+    # CAP_DSHOW gives reliable release() on Windows
+    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
     save_dir = os.path.join(DATASET_DIR, student_name)
     os.makedirs(save_dir, exist_ok=True)
@@ -52,43 +53,49 @@ def enroll_student(student_name, images_count=10):
     count = 0
     skipped = 0
 
-    # Capture images
-    while count < images_count:
-        ret, frame = cap.read()
-        if not ret:
-            continue
+    try:
+        # Capture images
+        while count < images_count:
+            ret, frame = cap.read()
+            if not ret:
+                continue
 
-        # Face detection
-        results = model(frame, conf=0.5)
+            # Face detection
+            results = model(frame, conf=0.5)
 
-        # Save images with detected faces
-        for r in results:
-            if len(r.boxes) > 0:
-                # Get the first face detection
-                box = r.boxes[0]
-                x1, y1, x2, y2 = map(int, box.xyxy[0])
+            # Save images with detected faces
+            for r in results:
+                if len(r.boxes) > 0:
+                    # Get the first face detection
+                    box = r.boxes[0]
+                    x1, y1, x2, y2 = map(int, box.xyxy[0])
 
-                # Validate face size (minimum 100x100 pixels for quality)
-                face_width = x2 - x1
-                face_height = y2 - y1
-                if face_width < 100 or face_height < 100:
-                    skipped += 1
-                    print(f"[SKIP] Face too small ({face_width}x{face_height}), move closer")
+                    # Validate face size (minimum 100x100 pixels for quality)
+                    face_width = x2 - x1
+                    face_height = y2 - y1
+                    if face_width < 100 or face_height < 100:
+                        skipped += 1
+                        print(f"[SKIP] Face too small ({face_width}x{face_height}), move closer")
+                        break
+
+                    count += 1
+                    img_path = os.path.join(save_dir, f"img{count}.jpg")
+                    cv2.imwrite(img_path, frame)
+                    print(f"Captured image: {count}/{images_count} ({face_width}x{face_height}px)")
+                    time.sleep(0.8)
                     break
 
-                count += 1
-                img_path = os.path.join(save_dir, f"img{count}.jpg")
-                cv2.imwrite(img_path, frame)
-                print(f"Captured image: {count}/{images_count} ({face_width}x{face_height}px)")
-                time.sleep(0.8)
+            cv2.imshow("Enrollment", frame)
+            if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
+    finally:
+        # Always release camera and destroy windows, even if an error occurred
+        cap.release()
+        cv2.destroyAllWindows()
+        # Extra waitKey calls flush the destroy message on Windows
+        for _ in range(4):
+            cv2.waitKey(1)
 
-        cv2.imshow("Enrollment", frame)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-
-    cap.release()
-    cv2.destroyAllWindows()
     print(f"Enrollment completed! Captured {count} images (skipped {skipped} low-quality)")
 
 
